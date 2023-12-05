@@ -1,0 +1,144 @@
+@font-face {
+  font-family: eternal;
+  src: url(fonts/eternal.otf);
+}
+:root{
+--color1:#711c91;
+--color2:#ea00d9;
+--color3:#0abdc6;
+--color4:#133e7c;
+--dark:#091833;
+--light:rgba(255,255,255,0.872);
+--light-mid:rgba(255,255,255,0.6);
+--light-low:rgba(255,255,255,0.344);
+--dark:#121212;
+--black:#000000;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-color: var(--dark);
+  color: var(--light);
+  font-family: eternal ;
+}
+a{
+  padding: 1em;
+  background-color: #434343;
+  color: yellow;
+}
+header{
+  width: 98vw;
+  height: 80vh;
+  text-align: center;
+  font-size: 40px;
+}
+.name{
+  font-family: eternal ;
+  margin-top: 40vh;
+  margin-bottom: 10vh;
+}
+.skill{
+  width:97vw;
+  min-height: auto;
+  margin-top: 10vh;
+  margin-left: 2em;
+}
+.projects{
+  background-color: yellow;
+  width: 98vw;
+  min-height: 70vh;
+  padding-top: 2em;
+}
+.project{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dark);
+  width: 80vw;
+  min-height: 50vh;
+  margin: auto;
+}
+.projects h1{
+  color: var(--black)
+}
+.project img{
+  width:auto ;
+  height: 60vh;
+  filter:blur(3px);
+  transition: all .5s;
+  aspect-ratio: 4/8
+}
+.project img:hover{
+  filter: blur(0px);
+}
+.project .project-title{
+  margin: 1em;
+  font-size: 0.9em;
+  color: var(--light-mid);
+}
+
+h1{
+  font-family: Monospace;
+  
+  color: var(--light);
+  font-weight: 2px;
+}
+h1:hover{
+  text-shadow: 4px 6px yellow;
+}
+h3{
+  color: var(--light-mid);
+}
+.heading{
+  font-family: eternal;
+  font-style: italic;
+  font-size: 1.8em;
+}
+.text-center{
+  text-align: center;
+}
+.eternal{
+  color: var(--light-mid);
+  font-family: eternal;
+}
+.p-10{
+  padding: 1em;
+}
+.line{
+  width: 70vw;
+  height: 2px;
+  background-color: var(--color1)
+}
+.vibrance{
+  transition: all 0.2s;
+  margin: 1em;
+
+  animation-name: vibrance;
+  animation-duration: 3s;
+
+  animation-iteration-count: infinite;
+}
+
+@keyframes vibrance{
+  0%{
+    background-image: linear-gradient(to right,var(--color2), var(--color3) );
+  }
+  10%{
+    background-image: linear-gradient(210deg,var(--color1) , var(--color3));
+  }
+  25%{
+    background-image: linear-gradient(450deg,var(--color1) , var(--color3) );
+  }
+  50%{
+    background-image: linear-gradient(370deg,var(--color3) , var(--color1) );
+  }
+  75%{
+    background-image: linear-gradient(200deg,var(--color1) , var(--color3) );
+  }
+  100%{
+    background-image: linear-gradient(to right, var(--color4), var(--dark));
+  }
+  
+}
+.hide{
+  display: none;
+}
